@@ -9,6 +9,7 @@ app.get('/', (req, res) => {
 
 app.post('/weather', (req, res) => {
   const { cityName } = req.body;
+  
   if (!cityName) {
     return res.status(400).json({ error: 'There is no city'});
   }
